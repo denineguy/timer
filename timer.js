@@ -33,11 +33,11 @@ class Timer {
     }
 
     get timeRemaining() {
-        return parseFloat(this.durationInput.value).toFixed(2);
+        return parseFloat(this.durationInput.value);
     }
 
     set timeRemaining(time) {
-        this.durationInput.value = time;
+        this.durationInput.value = time.toFixed(2);
     }
 
     pause = () => {
