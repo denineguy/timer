@@ -14,7 +14,8 @@ class Timer {
     };
 
     tick = () => {
-        console.log('tick');
+        const timeRemaining = parseFloat(this.durationInput.value);
+        this.durationInput.value = timeRemaining - 1;
     }
 
     pause = () => {
@@ -22,7 +23,7 @@ class Timer {
     }
 }
 
-const durationInput = document.querySelector('#durationInput');
+const durationInput = document.querySelector('#duration');
 const startButton = document.querySelector('#start');
 const pauseButton = document.querySelector('#pause');
 
